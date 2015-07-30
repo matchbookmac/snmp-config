@@ -1,0 +1,12 @@
+UP-BRIDGE-MIB DEFINITIONS ::= BEGIN
+IMPORTS ucdExperimental FROM UCD-SNMP-MIB;
+
+demotraps OBJECT IDENTIFIER ::= { ucdExperimental 990 }
+
+demo-trap TRAP-TYPE
+STATUS current
+ENTERPRISE demotraps
+VARIABLES { sysLocation }
+DESCRIPTION "This is just a demo"
+::= 18
+END
